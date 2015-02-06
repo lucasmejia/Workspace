@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Quingenti</title>
+    </head>
+
+    <body>
+        <h1>Bienvenido a Quigenti</h1>
+			<p>Estas son las categorias:</p>
+			
+			{% if categories %}
+				<ul>
+					{% for category in categories %}
+					<li><a href="/quingenti/category/{{ category.url}}">{{ category.name }}</a></li>
+					{% endfor %}
+				</ul>
+			{% else %}
+				<strong>No hay categorias disponibles.</strong>
+			{% endif %}
+
+    </body>
+
+</html>

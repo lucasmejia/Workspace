@@ -10,5 +10,6 @@ urlpatterns = patterns('',
 
 	url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 	url(r'^admin/', include(admin.site.urls)),
+	url(r'^quingenti/add_category/$', views.add_category, name='add_category'),
 	url(r'category/(?P<category_name_url>\w+)/$', views.category, name='category'),
 )

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quingenti</title>
+    </head>
+
+    <body>
+        <h1>Add a Gig</h1>
+
+        <form id="gig_form" method="post" action="/quingenti/add_gig/">
+
+            {% csrf_token %}
+            {% for hidden in form.hidden_fields %}
+                {{ hidden }}
+            {% endfor %}
+
+            {% for field in form.visible_fields %}
+                {{ field.errors }}
+                {{ field.help_text }}
+                {{ field }}
+            {% endfor %}
+
+            <input type="submit" name="submit" value="Create Gig" />
+        </form>
+    </body>
+
+</html>

@@ -9,8 +9,8 @@
         {% if category %}
             {% if gigs %}
             <ul>
-                {% for gig in gigs %}
-                <li><a href="{{ gig.url }}">{{ gig.title }}</a></li>
+                {% for gig in gig_list %}
+                <li><a href="/quingenti/gig/{{ gig.url }}">{{ gig.title }}</a></li>
                 {% endfor %}
             </ul>
             {% else %}
